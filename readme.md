@@ -1,5 +1,5 @@
-# offline-docs [![Dependency Status](http://img.shields.io/david/vvo/offline-docs.svg?style=flat-square)](https://david-dm.org/vvo/offline-docs) [![devDependency Status](http://img.shields.io/david/dev/vvo/offline-docs.svg?style=flat-square)](https://david-dm.org/vvo/offline-docs#info=devDependencies)
-
+# offdocs 
+### Based on https://github.com/vvo/offline-docs
 ![screenshot](screenshot.png)
 
 Always get some documentation on the modules you use, even offline.
@@ -7,9 +7,9 @@ Always get some documentation on the modules you use, even offline.
 No network no work? WRONG! Get the minimum documentation when you need it.
 
 ```shell
-npm install -g offline-docs
+npm install -g offdocs
 cd awesomeNodeJSProject
-offline-docs
+offdocs
 # Offline docs server listening on http://0.0.0.0:5000
 ```
 
@@ -20,8 +20,8 @@ This module may also be usefull in situations where you do have network. It show
 ## contribute
 
 ```shell
-git clone git@github.com:vvo/offline-docs.git
-cd offline-docs
+git clone git@github.com:gmarcos87/offdocs.git
+cd offdocs
 npm run dev
 ```
 

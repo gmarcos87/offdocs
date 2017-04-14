@@ -1,19 +1,19 @@
 {
-  "name": "offline-docs",
-  "version": "1.0.4",
+  "name": "offdocs",
+  "version": "0.0.1",
   "description": "Always get some documentation on the modules you use, even offline",
   "main": "index.js",
   "bin": {
-    "offline-docs": "bin/offline-docs"
+    "offdocs": "bin/offdocs"
   },
   "scripts": {
-    "server-watch": "watchy -kw ./app.js -i '/\\.|/node_modules|/test$' -- ./bin/offline-docs",
+    "server-watch": "watchy -kw ./app.js -i '/\\.|/node_modules|/test$' -- ./bin/offdocs",
     "browser-sync": "browser-sync start --proxy 'localhost:5000' --files 'site/**' --no-open",
     "watch-js": "watchify browser.js -o site/bundle.js -dv  -t [ babelify --presets [ es2015 ] ]",
     "dev": "npm run server-watch & npm run watch-js & npm run browser-sync",
     "postinstall": "browserify browser.js -o site/bundle.js -t [ babelify --presets [ es2015 ] ]"
   },
-  "author": "Vincent Voyer <vincent@zeroload.net>",
+  "author": "Marcos Gutierrez <gmarcos87@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "browserify": "^14.3.0",
