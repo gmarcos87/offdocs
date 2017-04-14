@@ -1,36 +1,20 @@
-var page = require('page');
-var request = require('superagent');
-var Vue = require('vue');
-var packageList;
+import Vue from 'vue';
+import VueMaterial from 'vue-material';
+import InfiniteLoading from 'vue-infinite-loading'
 
-var main = new Vue({
-  el: 'body',
-  data: {
-    list: false,
-    detail: false,
-    packages: [],
-  }
+import App from './src/app.vue'
+
+
+let packageList;
+
+Vue.use(VueMaterial)
+
+
+Vue.component('InfiniteLoading',InfiniteLoading)
+
+new Vue({
+  el: "#app",
+  render: h => h(App)
 });
-
-page('/', function index() {
-  request
-    .get('/packages')
-    .end(function(res) {
-      main.list = true;
-      main.detail = false;
-      main.packages = res.body;
-    });
-});
-
-page('/show/:packageName', function(ctx) {
-  request
-    .get('/package/' + ctx.params.packageName)
-    .end(function(res) {
-      main.detail = res.body.readme;
-      main.list = false;
-    })
-});
-
-page();
 
 

@@ -6,7 +6,6 @@ module.exports = function(packages) {
   var path = require('path');
   var serveStatic = require('serve-static');
   var staticFiles = serveStatic(path.join(__dirname, 'site'));
-
   var renderer = new marked.Renderer();
 
   marked.setOptions({
