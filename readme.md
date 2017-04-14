@@ -1,10 +1,12 @@
 # offdocs 
-### Based on https://github.com/vvo/offline-docs
-![screenshot](screenshot.png)
+**Based on https://github.com/vvo/offline-docs**
 
 Always get some documentation on the modules you use, even offline.
 
 No network no work? WRONG! Get the minimum documentation when you need it.
+
+![screenshot](screenshot.png)
+
 
 ```shell
 npm install -g offdocs
