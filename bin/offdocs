@@ -13,6 +13,7 @@ getPackages(cwd, function(err, packages) {
 
   var server = http.createServer(app);
   server.listen(5000);
+  console.log('Starting server...');
 
   server.on('listening', function serverStarted() {
     console.log('Offline docs server listening on http://%s:%d', this.address().address, this.address().port);
